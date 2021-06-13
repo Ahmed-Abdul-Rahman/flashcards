@@ -1,0 +1,70 @@
+body{
+    background-image: url("world.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1 {
+    font-family: Calibri, sans-serif;
+    font-size: 300%;
+    text-align: center;
+}
+.container{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 600px;
+    height: 600px;
+}
+.card{
+    height: 190px;
+    width: 190px;
+    position: relative;
+    transition: all 700ms linear;
+    transform-style: preserve-3d;
+}
+.front, .back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Calibri, sans-serif;
+    font-size: 200%;
+    border-radius: 10px;
+    position: absolute;
+}
+.r1{
+    background: linear-gradient(#08aeea, #2af598);
+}
+.r2{
+    background: linear-gradient(#2af598,#f8da61);
+}
+.r3{
+    background: linear-gradient(#f8da61,#ff5acd);
+}
+.front{
+    color: black;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back{
+    background: orangered;
+    color: black;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.cont{
+    perspective: 1200px;
+}
+p {
+    text-align: center;
+}
+
+
+
